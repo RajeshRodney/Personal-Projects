@@ -1,0 +1,474 @@
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+*{  
+    margin:0;
+    padding:0;
+    font-family: 'DM Serif Display', serif;
+
+}
+
+
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(Images/child-8117667_1280.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+
+}
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 150px;
+}
+.nav-links{
+    flex:1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-family: Saud;
+
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height:2px;
+    background: #93D9EF;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+    
+}
+.text-box{
+    width: 90%;
+    color:#fff;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 62px;
+}
+
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color:#fff;
+}
+.v-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.v-btn:hover{
+    border: 1px solid #93D9EF;
+    background: #93D9EF;
+    transition: 1s;
+}
+
+/*-----Dentists----*/
+.dentists{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+p{
+    color: #303030;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.dentist-col{
+    flex-basis: 31%;
+    background:#bfe2ec;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.dentist-col:hover{
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.2);
+}
+
+/*-----Reviews-----*/
+.reviews{
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    text-align: center;
+}
+.review-col{
+    flex-basis: 45%;
+    border-radius: 10px;
+    margin-bottom: 0%;
+    text-align: left;
+    background: #bfe2ec;
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+}
+.review-col img{
+    height: 40px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+.review-col p{
+    padding: 0;
+}
+.review-col h3{
+    margin-top: 15px;
+    text-align: left;
+}
+.review-col .fa{
+    color:#04abde;
+}
+@media(max-width: 700px){
+    .review-col img{
+        margin-left: 0px;
+        margin-right: 15px;
+    }
+}
+
+/*-------Footer------*/
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px;
+    margin: auto;
+}
+.footer p{
+    color: #acacac;
+}
+.icons .fa{
+    color: #93D9EF;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+}
+
+/*-----Carousel-----*/
+.carousel{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+p{
+    color: #303030;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.container{
+    position: relative;
+    max-width: 46rem;
+    overflow: hidden;
+    margin: auto;
+}
+
+.slider{
+    width: 100%;
+    display: flex;
+    aspect-ratio: 16/9;
+    overflow-x: auto;
+    box-shadow: 0 1.5rem 3 rem -0.75 hsla(0%, 0%, 0%, 0.25);
+   
+}
+.slider img{
+    flex: 1 0 100%;
+    width: 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+    animation: slide 16s infinite;
+}
+@keyframes slide {
+    0%{
+        transform:translateX(0);
+    }
+    10%{
+        transform:translateX(0);
+    }
+    20%{
+        transform:translateX(-100%);
+    }
+    30%{
+        transform:translateX(-100%);
+    }
+    40%{
+        transform:translateX(-200%);
+    }
+    50%{
+        transform:translateX(-200%);
+    }
+    60%{
+        transform:translateX(-300%);
+    }
+    70%{
+        transform:translateX(-400%);
+    }
+    80%{
+        transform:translateX(-400%);
+    }
+    90%{
+        transform:translateX(0);
+    }
+    100%{
+        transform:translateX(0);
+    } 
+}
+
+.sub-header{
+    min-height:70vh;
+    width: 100%;
+    overflow-x: hidden;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(Images/dentist-1639683_1920.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}   
+
+.about-us{
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+.about-col{
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+
+.about-col img{
+    width: 100%;
+}
+
+.about-col h1{
+    padding-top: 0;
+}
+.about-col p{
+    padding: 15px 0 25px;
+}
+
+.blue-btn{
+    border: 1px solid #93D9EF;
+    background: transparent;
+    color: #93D9EF;
+}
+
+.blue-btn:hover{
+    color: #fff;
+}
+
+/*---contact us page---*/
+.sub-header2{
+    min-height:70vh;
+    width: 100%;
+    overflow-x: hidden;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(Images/alex-padurariu-7ByfI6Fpi90-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}   
+.location{
+    width:80%;
+    margin: auto;
+    padding: 80px 0;
+}
+
+.location iframe{
+    width: 100%;
+}
+.contact-us{
+    width: 80%;
+    margin: auto;
+}
+.contact-col{
+    flex-basis: 48%;
+    margin-bottom:30px;
+}
+.contact-col div{
+    display:flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.contact-col div .fa{
+    font-size: 28px;
+    color:#93D9EF;
+    margin: 10px;
+    margin-right: 30px;
+}
+.contact-col div p{
+    color: #acacac;
+    padding: 0;
+}
+.contact-col div h5{
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: 400;
+}
+.contact-col input, .contact-col textarea{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 17px;
+    outline: none;
+    border: 1px solid #ccc;
+}
+
+/*---services page----*/
+.sub-header3{
+    min-height:70vh;
+    width: 100%;
+    overflow-x: hidden;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(Images/ai-generated-8223597_1280.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}   
+.services{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+p{
+    color: #303030;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.service-col{
+    flex-basis: 31%;
+    background:#bfe2ec;
+    border-radius: 10px;
+    margin-bottom: 0%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.service-col:hover{
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.2);
+}
+.service-col img{
+    max-width: 100%;
+    align-items: center;
+    height: 150px;
+    margin-left: 5px;
+    border-radius: 10%;
+}
+
+/*---book appointment page---*/
+.sub-header4{
+    min-height:70vh;
+    width: 100%;
+    overflow-x: hidden;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(Images/dentist-2264144_1280.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+.book{
+    margin: auto;
+    width: 80%;
+    justify-content: space-between;
+}   
+
+
+.book-col{
+    margin-top: 40px;
+    flex-basis: 48%;
+    margin-bottom:30px;
+}
+.book-col div{
+    display:flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.book-col input{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 17px;
+    outline: none;
+    border: 1px solid #ccc;
+}
+

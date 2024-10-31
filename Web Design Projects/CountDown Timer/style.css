@@ -1,0 +1,85 @@
+*
+{
+    margin:0;
+    padding:0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100vw;
+    height:100vh;
+    background-position: center;
+    background-size: cover;
+    background-image: url(images/background.gif)
+}
+
+.content{
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -90%);
+    color:#424242;
+    text-align: center;
+    
+    
+}
+
+.content h1{
+    font-size: 6vw;
+    font-weight: 700;
+}
+.content h1 span{
+    /*This is where I added my first animation to change my text "Finals" from grey to red*/
+    animation-name: colorChange;
+    animation-duration: 6s;
+    animation-delay: 3s;
+    animation-fill-mode: both;
+    
+}
+
+@keyframes colorChange{
+    from{color: #424242;}
+    to{ color:rgb(192, 26, 26)}
+}
+
+.Finals-time{
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: rgba(169, 169, 169, 0.399);
+    border: #424242;
+    padding: 12px 25px;
+    color:#fff;
+    justify-content: center;
+
+}
+
+.Finals-time div{
+    background-color: rgba(80, 79, 79, 0.503);
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 20px;
+    /*This is where I added my second animation to change the numbers and text in my countdown from grey to white*/
+    animation-name: colorChange2;
+    animation-duration: 6s;
+    animation-delay: 3s;
+    animation-fill-mode: both;
+    
+}
+
+@keyframes colorChange2{
+    from{color: rgba(80, 79, 79, 0);}
+    to{ color:rgb(255, 255, 255)}
+}
+
+
+
+
+.Finals-time div p{
+    font-size: 60px;
+    margin-bottom: -14px;
+    
+}
+
